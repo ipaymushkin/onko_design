@@ -1,0 +1,42 @@
+.touch-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.touch-input__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.touch-input__field {
+  min-height: clamp(48px, 7vh, 64px);
+  padding: 0 var(--space-md);
+  font-size: var(--font-subheading);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  background: var(--color-bg-tertiary);
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.touch-input__field:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-muted);
+}
+
+.touch-input__field::placeholder {
+  color: var(--color-text-muted);
+}
+
+.touch-input__hint {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}

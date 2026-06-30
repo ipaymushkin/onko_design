@@ -1,0 +1,111 @@
+.settings__body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding-bottom: var(--space-lg);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.settings__section-title {
+  margin-bottom: var(--space-md);
+}
+
+.settings__model-upload {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.settings__model-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  min-width: 0;
+  flex: 1 1 200px;
+}
+
+.settings__model-name {
+  font-size: var(--font-body);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.settings__model-dropzone {
+  padding: var(--space-lg);
+  border: 2px dashed var(--color-border);
+  border-radius: 12px;
+  text-align: center;
+  background: var(--color-bg-tertiary);
+}
+
+.settings__toggles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.settings__device-hint {
+  margin-bottom: var(--space-md);
+}
+
+.settings__device-switch {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: var(--space-md);
+}
+
+.settings__device-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  background: var(--color-bg-tertiary);
+  border: 2px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: var(--font-body);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  transition: border-color 0.15s, background 0.15s;
+  min-height: clamp(100px, 14vh, 140px);
+}
+
+.settings__device-option--active {
+  border-color: var(--color-accent);
+  background: var(--color-accent-muted);
+}
+
+.settings__device-icon {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.settings__icd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: var(--space-sm);
+}
+
+.settings__icd-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-bg-tertiary);
+  border-radius: 10px;
+  font-size: var(--font-caption);
+  color: var(--color-text-primary);
+}
+
+.settings__about {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}

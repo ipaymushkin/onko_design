@@ -1,0 +1,110 @@
+.upload-materials__body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  overflow-y: auto;
+  overflow-x: hidden;
+  align-content: flex-start;
+}
+
+.upload-materials__dropzone {
+  flex: 1 1 100%;
+  min-height: clamp(140px, 22vh, 220px);
+  border: 3px dashed var(--color-border);
+  background: var(--color-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s;
+  border-radius: var(--radius-md);
+}
+
+.upload-materials__types,
+.upload-materials__queue,
+.upload-materials__info {
+  flex: 1 1 280px;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.upload-materials__dropzone:hover {
+  border-color: var(--color-accent-border);
+}
+
+.upload-materials__dropzone-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  text-align: center;
+  padding: var(--space-lg);
+}
+
+.upload-materials__dropzone-icon {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  opacity: 0.5;
+}
+
+.upload-materials__types {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  min-width: 0;
+}
+
+.upload-type-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  min-height: clamp(56px, 8vh, 72px);
+}
+
+.upload-type-card__icon {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  flex-shrink: 0;
+}
+
+.upload-type-card__info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.upload-type-card__label {
+  font-size: var(--font-body);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.upload-materials__queue {
+  min-height: clamp(120px, 20vh, 200px);
+  min-width: 0;
+}
+
+.upload-materials__info-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: var(--space-xs);
+}
+
+.upload-materials__info-list li {
+  font-size: var(--font-caption);
+  color: var(--color-text-secondary);
+  padding-left: var(--space-lg);
+  position: relative;
+  line-height: 1.5;
+}
+
+.upload-materials__info-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}

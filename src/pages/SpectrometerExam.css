@@ -1,0 +1,166 @@
+.spectrometer-exam__body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  overflow: hidden;
+}
+
+.spectrometer-exam__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  min-height: 0;
+  min-width: 0;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.spectrometer-exam__results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  overflow-y: auto;
+  min-width: 0;
+  min-height: 0;
+  flex: 0 1 auto;
+  max-height: 40vh;
+}
+
+@container page (min-width: 800px) {
+  .spectrometer-exam__body {
+    flex-direction: row;
+  }
+
+  .spectrometer-exam__main {
+    flex: 1 1 55%;
+  }
+
+  .spectrometer-exam__results {
+    flex: 0 1 40%;
+    max-height: none;
+  }
+}
+
+.spectrometer-exam__preview {
+  min-height: clamp(120px, 20vh, 200px);
+  background: var(--color-video-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spectrometer-exam__preview-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-text-on-dark);
+}
+
+.spectrometer-exam__preview-content .text-caption {
+  color: var(--color-text-on-dark);
+  opacity: 0.85;
+}
+
+.spectrometer-exam__preview-icon {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.spectrometer-exam__zones-hint {
+  margin: var(--space-xs) 0 var(--space-md);
+}
+
+.spectrometer-exam__zones-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.spectrometer-zone {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-bg-tertiary);
+  border: 2px solid var(--color-border-light);
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s;
+  min-height: clamp(56px, 8vh, 72px);
+  color: var(--color-text-primary);
+  flex-wrap: wrap;
+}
+
+.spectrometer-zone--active {
+  border-color: var(--color-accent);
+  background: var(--color-accent-muted);
+}
+
+.spectrometer-zone--captured {
+  border-color: var(--color-success);
+}
+
+.spectrometer-zone__icon {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  flex-shrink: 0;
+}
+
+.spectrometer-zone__label {
+  flex: 1;
+  min-width: 120px;
+  font-size: var(--font-body);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.spectrometer-exam__header-actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.spectrometer-exam__zone-results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.spectrometer-exam__zone-result {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-sm);
+  background: var(--color-bg-tertiary);
+  border-radius: 10px;
+}
+
+.spectrometer-exam__zone-result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.spectrometer-exam__prob {
+  font-size: var(--font-subheading);
+  font-weight: 700;
+}
+
+.spectrometer-exam__summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.spectrometer-exam__progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}

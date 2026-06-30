@@ -1,0 +1,152 @@
+.camera-exam__body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  overflow: hidden;
+}
+
+.camera-exam__video-area {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  min-height: 0;
+  min-width: 0;
+  flex: 1;
+}
+
+.camera-exam__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  flex: 0 1 auto;
+  max-height: 45vh;
+}
+
+@container page (min-width: 800px) {
+  .camera-exam__body {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .camera-exam__video-area {
+    flex: 1 1 60%;
+  }
+
+  .camera-exam__sidebar {
+    flex: 0 1 36%;
+    max-height: none;
+  }
+}
+
+.camera-exam__video {
+  flex: 1;
+  position: relative;
+  background: var(--color-video-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  min-height: clamp(180px, 30vh, 400px);
+}
+
+.camera-exam__video-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  color: var(--color-text-on-dark);
+}
+
+.camera-exam__video-placeholder .text-caption {
+  color: var(--color-text-on-dark);
+  opacity: 0.85;
+}
+
+.camera-exam__video-icon {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+.camera-exam__rec {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  font-size: var(--font-caption);
+}
+
+.camera-exam__video-overlay {
+  position: absolute;
+  bottom: var(--space-md);
+  left: var(--space-md);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.camera-exam__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.camera-exam__header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.camera-exam__ai-panel {
+  flex-shrink: 0;
+}
+
+.camera-exam__ai-badges {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.camera-exam__frames {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.camera-exam__frames-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+  flex-shrink: 0;
+  gap: var(--space-sm);
+}
+
+.camera-exam__frames-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.camera-exam__selected {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  flex-shrink: 0;
+}
